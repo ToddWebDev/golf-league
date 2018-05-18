@@ -20,7 +20,7 @@ export default class Home extends Component {
         <div className='container'>
           <h1 className='large-header'>Golf League</h1>
           <h3 className='header text-center'>
-            Select a Team
+            Select a Course
           </h3>
           <div className='home-grid'>
             {teamNames.map((id) => (

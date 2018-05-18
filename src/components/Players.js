@@ -37,6 +37,39 @@ export default class Players extends Component {
         {loading === false && location.pathname === '/players'
           ? <div className='sidebar-instruction'>Select a Player</div>
           : null}
+          
+        <Route path={`${match.url}/:playerId`} render={({match}) => {
+          if (loading === true) return null
+          
+          const {
+            name, teamId, avatar, hcp, rpg, gir, fir, putts
+          } = players.find((player) => slug(player.name) === match.params.playerId)
+          
+          return (
+            <div className='panel'>
+             <img className='avatar' src={`${avatar}`} alt={`${name}'s avatar`} />
+             <h1 className='medium-header'>{name}</h1>
+             <div className='row'>
+               <ul className='info-list' style={{marginRight: 80}}>
+                 <li>Home Course
+                   <div>
+                     <Link style={{color: '#68809a'}} to={`/${teamId}`}>
+                       {teamId[0].toUpperCase() + teamId.slice(1)}
+                     </Link>
+                   </div>
+                 </li>
+                 <li>Handicap<div>{hcp}</div></li>
+                 <li>Rounds Played<div>{rpg}</div></li>
+               </ul>
+               <ul className='info-list'>
+                 <li>GIR<div>{gir}</div></li>
+                 <li>FIR<div>{fir}</div></li>
+                 <li>Putts<div>{putts}</div></li>
+               </ul>
+             </div>
+           </div>
+          )
+        }} />
         </div>
       )
   }
