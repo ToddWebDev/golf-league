@@ -1,22 +1,22 @@
 import slug from 'slug'
 
 const players = [
-  {name: 'Todd Rizzolo', teamId: 'bulls', hcp: 7, rpg: 17, avatar: 'https://avatars.io/twitter/rizzofosho', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'Austin Pernell', teamId: 'foxes', hcp: 9, rpg: 17, avatar: 'https://avatars.io/twitter/austinpernell', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'Shooter McGavin', teamId: 'hedgehogs', hcp: 14, rpg: 17, avatar: 'https://avatars.io/twitter/shootermcgavin_', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'Donald Trump', teamId: 'hedgehogs', hcp: 75, rpg: 17, avatar: 'https://avatars.io/twitter/realdonaldtrump', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'Michael Arnold', teamId: 'koalas', hcp: 22, rpg: 17, avatar: 'https://avatars.io/twitter/marmanold', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'Happy Gilmore', teamId: 'lemurs', hcp: 26, rpg: 17, avatar: 'https://avatars.io/twitter/_happy_gilmore', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'Jack Nicklaus', teamId: 'foxes', hcp: 2, rpg: 17, avatar: 'https://avatars.io/twitter/jacknicklaus', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'Justin Thomas', teamId: 'bulls', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/justinthomas34', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'Jake Owen', teamId: 'koalas', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/jakeowen', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'Bill Murray', teamId: 'lemurs', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/billmurray', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'John Daly', teamId: 'bulls', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/pga_johndaly', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'Michael Scott', teamId: 'koalas', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/Idundermifflin', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'Leslie Knope', teamId: 'foxes', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/theknope', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'Todd Rizzolo', courseId: 'bulls', hcp: 7, rpg: 17, avatar: 'https://avatars.io/twitter/rizzofosho', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'Austin Pernell', courseId: 'foxes', hcp: 9, rpg: 17, avatar: 'https://avatars.io/twitter/austinpernell', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'Shooter McGavin', courseId: 'hedgehogs', hcp: 14, rpg: 17, avatar: 'https://avatars.io/twitter/shootermcgavin_', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'Donald Trump', courseId: 'hedgehogs', hcp: 75, rpg: 17, avatar: 'https://avatars.io/twitter/realdonaldtrump', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'Michael Arnold', courseId: 'koalas', hcp: 22, rpg: 17, avatar: 'https://avatars.io/twitter/marmanold', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'Happy Gilmore', courseId: 'lemurs', hcp: 26, rpg: 17, avatar: 'https://avatars.io/twitter/_happy_gilmore', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'Jack Nicklaus', courseId: 'foxes', hcp: 2, rpg: 17, avatar: 'https://avatars.io/twitter/jacknicklaus', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'Justin Thomas', courseId: 'bulls', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/justinthomas34', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'Jake Owen', courseId: 'koalas', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/jakeowen', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'Bill Murray', courseId: 'lemurs', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/billmurray', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'John Daly', courseId: 'bulls', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/pga_johndaly', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'Michael Scott', courseId: 'koalas', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/Idundermifflin', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'Leslie Knope', courseId: 'foxes', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/theknope', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
 ]
 
-const teams = {
+const courses = {
   bulls: {
     id: 'bulls',
     name: 'The Bull Trap',
@@ -94,16 +94,16 @@ const articleInfo = [
   { title: "are all washed up", date: new Date(2017, 5, 4) },
 ]
 
-function generateTitle (teamId, index) {
-  return  teamId[0].toUpperCase() + teamId.slice(1) + ' ' + articleInfo[index].title
+function generateTitle (courseId, index) {
+  return  courseId[0].toUpperCase() + courseId.slice(1) + ' ' + articleInfo[index].title
 }
 
-export function generateArticle (teamId, articleId) {
+export function generateArticle (courseId, articleId) {
   const index = articleInfo
-    .map((info, index) => slug(generateTitle(teamId, index)))
+    .map((info, index) => slug(generateTitle(courseId, index)))
     .indexOf(articleId)
 
-  const title = generateTitle(teamId, index)
+  const title = generateTitle(courseId, index)
 
   return {
     id: slug(title),
@@ -113,9 +113,9 @@ export function generateArticle (teamId, articleId) {
   }
 }
 
-export function generateTeamsArticles (teamId) {
+export function generateTeamArticles (courseId) {
   return articleInfo.map(({title, date}, index) => {
-    const updatedTitle = generateTitle(teamId, index)
+    const updatedTitle = generateTitle(courseId, index)
     return {
       date,
       title: updatedTitle,
@@ -125,6 +125,6 @@ export function generateTeamsArticles (teamId) {
 }
 
 export {
-  teams,
+  courses,
   players,
 }

@@ -13,10 +13,10 @@ export default class Players extends Component {
   }
   componentDidMount() {
     const { location } = this.props
-    location.search ? this.fetchPlayers(parse(location.search).teamId) : this.fetchPlayers()
+    location.search ? this.fetchPlayers(parse(location.search).courseId) : this.fetchPlayers()
   }
-  fetchPlayers = (teamId) => {
-    getPlayers(teamId)
+  fetchPlayers = (courseId) => {
+    getPlayers(courseId)
     .then((players) => this.setState(() => ({
       loading: false,
       players
@@ -42,7 +42,7 @@ export default class Players extends Component {
           if (loading === true) return null
           
           const {
-            name, teamId, avatar, hcp, rpg, gir, fir, putts
+            name, courseId, avatar, hcp, rpg, gir, fir, putts
           } = players.find((player) => slug(player.name) === match.params.playerId)
           
           return (
@@ -53,8 +53,8 @@ export default class Players extends Component {
                <ul className='info-list' style={{marginRight: 80}}>
                  <li>Home Course
                    <div>
-                     <Link style={{color: '#68809a'}} to={`/${teamId}`}>
-                       {teamId[0].toUpperCase() + teamId.slice(1)}
+                     <Link style={{color: '#68809a'}} to={`/${courseId}`}>
+                       {courseId[0].toUpperCase() + courseId.slice(1)}
                      </Link>
                    </div>
                  </li>
