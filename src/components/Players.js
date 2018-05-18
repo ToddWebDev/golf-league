@@ -4,6 +4,10 @@ import Sidebar from './Sidebar'
 import { getPlayers } from '../api'
 import { parse } from 'query-string'
 import slug from 'slug'
+import {
+  TransitionGroup,
+  CSSTransition
+} from 'react-transition-group'
 
 
 export default class Players extends Component {
@@ -46,28 +50,32 @@ export default class Players extends Component {
           } = players.find((player) => slug(player.name) === match.params.playerId)
           
           return (
-            <div className='panel'>
-             <img className='avatar' src={`${avatar}`} alt={`${name}'s avatar`} />
-             <h1 className='medium-header'>{name}</h1>
-             <div className='row'>
-               <ul className='info-list' style={{marginRight: 80}}>
-                 <li>Home Course
-                   <div>
-                     <Link style={{color: '#68809a'}} to={`/${courseId}`}>
-                       {courseId[0].toUpperCase() + courseId.slice(1)}
-                     </Link>
-                   </div>
-                 </li>
-                 <li>Handicap<div>{hcp}</div></li>
-                 <li>Rounds Played<div>{rpg}</div></li>
-               </ul>
-               <ul className='info-list'>
-                 <li>GIR<div>{gir}</div></li>
-                 <li>FIR<div>{fir}</div></li>
-                 <li>Putts<div>{putts}</div></li>
-               </ul>
-             </div>
-           </div>
+            <TransitionGroup className='panel'>
+              <CSSTransition key={location.key} timeout={250} classNames='fade'>
+                <div className='panel'>
+                 <img className='avatar' src={`${avatar}`} alt={`${name}'s avatar`} />
+                 <h1 className='medium-header'>{name}</h1>
+                 <div className='row'>
+                   <ul className='info-list' style={{marginRight: 80}}>
+                     <li>Home Course
+                       <div>
+                         <Link style={{color: '#68809a'}} to={`/${courseId}`}>
+                           {courseId[0].toUpperCase() + courseId.slice(1)}
+                         </Link>
+                       </div>
+                     </li>
+                     <li>Handicap<div>{hcp}</div></li>
+                     <li>Rounds Played<div>{rpg}</div></li>
+                   </ul>
+                   <ul className='info-list'>
+                     <li>GIR<div>{gir}</div></li>
+                     <li>FIR<div>{fir}</div></li>
+                     <li>Putts<div>{putts}</div></li>
+                   </ul>
+                 </div>
+               </div>
+              </CSSTransition>
+            </TransitionGroup>
           )
         }} />
         </div>
