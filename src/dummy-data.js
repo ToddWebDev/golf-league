@@ -11,7 +11,7 @@ const players = [
   {name: 'Justin Thomas', courseId: 'bulls', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/justinthomas34', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
   {name: 'Jake Owen', courseId: 'koalas', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/jakeowen', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
   {name: 'Bill Murray', courseId: 'lemurs', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/billmurray', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
-  {name: 'John Daly', courseId: 'bulls', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/pga_johndaly', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
+  {name: 'John Daly', courseId: 'hedgehogs', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/pga_johndaly', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
   {name: 'Michael Scott', courseId: 'koalas', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/Idundermifflin', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
   {name: 'Leslie Knope', courseId: 'foxes', hcp: 3, rpg: 17, avatar: 'https://avatars.io/twitter/theknope', fir: 3, gir: 4, putts: 8, pars: 4, bogeys: 4, d_bogeys: 1, birdies: 1, eagles: 0 },
 ]
@@ -63,7 +63,7 @@ const courses = {
   },
   koalas: {
     id: 'koalas',
-    name: 'Koala Open',
+    name: 'Koala Forest',
     wins: 55,
     losses: 27,
     established: 2005,

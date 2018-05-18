@@ -4,6 +4,7 @@ import Sidebar from './Sidebar'
 import { getCourseNames } from '../api'
 import TeamLogo from './TeamLogo'
 import Course from './Course'
+import Loading from './Loading'
 
 export default class Courses extends Component {
   state =  {
@@ -40,7 +41,7 @@ export default class Courses extends Component {
             <div className='panel'>
               <Course id={match.params.courseId}>
                 {(course) => course === null
-                  ? <h1>Loading</h1>
+                  ? <Loading />
                   : <div style={{width: '100%'}}>
                       <TeamLogo id={course.id} className='center' />
                       <h1 className='medium-header'>{course.name}</h1>

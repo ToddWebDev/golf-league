@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom'
 import { getCourseArticles, getCourseNames } from '../api'
 import TeamLogo from './TeamLogo'
 import Course from './Course'
+import Loading from './Loading'
 import slug from 'slug'
 
 export default class CoursePage extends Component {
@@ -39,7 +40,7 @@ export default class CoursePage extends Component {
       <div>
         <Course id={courseId}>
           {(course) => course === null
-            ? <h1>Loading</h1>
+            ? <Loading />
             : <div className='panel'>
                 <TeamLogo id={courseId} />
                 <h1 className='medium-header'>{course.name}</h1>
@@ -51,7 +52,7 @@ export default class CoursePage extends Component {
                     View Roster
                   </Link>
                 </h4>
-                <h4>Championships</h4>
+                <h4>Hosted Championships</h4>
                 <ul className='championships'>
                   {course.championships.map((ship) => <li key={ship}>{ship}</li>)}
                 </ul>

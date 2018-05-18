@@ -5,6 +5,7 @@ import Players from './Players'
 import Courses from './Courses'
 import Navbar from './Navbar'
 import CoursePage from './CoursePage'
+import Articles from './Articles'
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
             <Route path='/players' component={Players} />
             <Route path='/courses' component={Courses} />
             <Route path='/:courseId' exact component={CoursePage} />
+            <Route path='/:courseId/articles' component={Articles} />
             <Route render={() => <h1 className='text-center'>404 Not Found!</h1>} />
           </Switch>
         </div>
