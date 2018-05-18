@@ -113,7 +113,7 @@ export function generateArticle (courseId, articleId) {
   }
 }
 
-export function generateTeamArticles (courseId) {
+export function generateCourseArticles (courseId) {
   return articleInfo.map(({title, date}, index) => {
     const updatedTitle = generateTitle(courseId, index)
     return {

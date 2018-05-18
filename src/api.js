@@ -2,7 +2,7 @@ import {
   courses,
   players,
   generateArticle,
-  generateTeamArticles
+  generateCourseArticles
 } from './dummy-data'
 
 let cachedPlayers = null
@@ -20,7 +20,7 @@ export function getPlayers (courseId) {
   })
 }
 
-export function getTeam (courseId) {
+export function getCourse (courseId) {
   return new Promise((res) => {
     if (typeof cachedCourses[courseId] === 'undefined') {
       cachedCourses[courseId] = courses[courseId]
@@ -48,8 +48,8 @@ export function getArticle (courseId, id) {
   })
 }
 
-export function getTeamArticles (courseId) {
+export function getCourseArticles (courseId) {
   return new Promise((res) => {
-    setTimeout(() => res(generateTeamArticles(courseId)), 700)
+    setTimeout(() => res(generateCourseArticles(courseId)), 700)
   })
 }
